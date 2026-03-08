@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Tra cứu Thần số học</title>
+</head>
+
+<body>
+
+<h2>Tra cứu Thần số học</h2>
+
+<input type="date" id="birth">
+<button onclick="calc()">Xem kết quả</button>
+
+<p id="result"></p>
+
+<script>
+
+function calc(){
+
+let birth=document.getElementById("birth").value;
+
+let nums=birth.replaceAll("-","");
+
+let sum=0;
+
+for(let i=0;i<nums.length;i++){
+sum+=parseInt(nums[i]);
+}
+
+while(sum>9){
+sum=sum.toString().split('').reduce((a,b)=>a+parseInt(b),0);
+}
+
+document.getElementById("result").innerHTML=
+"Số chủ đạo của bạn: "+sum;
+
+}
+
+</script>
+
+</body>
+</html>
