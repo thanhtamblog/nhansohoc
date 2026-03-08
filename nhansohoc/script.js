@@ -1,3 +1,4 @@
+console.log("JS đã chạy");
 function reduceNumber(num){
 
 while(num > 9 && num !== 11 && num !== 22){
@@ -68,5 +69,6 @@ document.getElementById("result").innerHTML=
 "<h2>Số chủ đạo: "+life+"</h2>";
 
 pythagorasChart(birth);
+
 
 }
