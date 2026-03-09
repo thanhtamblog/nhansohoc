@@ -91,3 +91,24 @@ pythagorasChart(birth);
 
 }
 
+function renderPitago(chart){
+
+let layout = [1,4,7,2,5,8,3,6,9];
+
+let html = `<div class="pitago-grid">`;
+
+layout.forEach(num=>{
+
+let value = chart[num] > 0 ? String(num).repeat(chart[num]) : "";
+
+let className = chart[num] > 0 ? "pitago-filled" : "pitago-empty";
+
+html += `<div class="pitago-cell ${className}">${value}</div>`;
+
+});
+
+html += `</div>`;
+
+document.getElementById("pitagoChart").innerHTML = html;
+}
+
