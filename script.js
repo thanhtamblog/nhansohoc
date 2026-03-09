@@ -87,6 +87,14 @@ count[d]++;
 return count;
 }
 pythagorasChart(birth);
+  
+let chart = createPitagoChart(birth);
+
+renderPitago(chart);
+
+showMissingNumbers(chart);
+
+detectArrows(chart);
 
 
 }
@@ -176,11 +184,5 @@ document.getElementById("pitagoArrows").innerHTML =
 
 }
 
-let chart = createPitagoChart(birth);
 
-renderPitago(chart);
-
-showMissingNumbers(chart);
-
-detectArrows(chart);
 
