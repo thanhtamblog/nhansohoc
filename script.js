@@ -68,7 +68,26 @@ document.getElementById("result").innerHTML=
 
 "<h2>Số chủ đạo: "+life+"</h2>";
 
+  function createPitagoChart(birthdate){
+
+let digits = birthdate.replaceAll("-","").split("");
+
+let count = {
+1:0,2:0,3:0,
+4:0,5:0,6:0,
+7:0,8:0,9:0
+};
+
+digits.forEach(d=>{
+if(count[d] !== undefined){
+count[d]++;
+}
+});
+
+return count;
+}
 pythagorasChart(birth);
 
 
 }
+
